@@ -1,10 +1,12 @@
+
 import { apple, bill, google } from "../assets";
 import styles, { layout } from "../style";
+import Image from "next/image";
 
 const Billing = () => (
   <section id="product" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
-      <img src={bill} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+      <Image src={bill} alt="billing" className="w-[100%] h-[100%] relative z-[5]"  />
 
       {/* gradient start */}
       <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
@@ -24,8 +26,8 @@ const Billing = () => (
       </p>
 
       <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-        <img src={apple} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />
-        <img src={google} alt="google_play" className="w-[144.17px] h-[43.08px] object-contain cursor-pointer" />
+        <Image src={apple} height={128.86} width={42.05} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />
+        <Image src={google} height={144.17} width={43.08} alt="google_play" className="w-[144.17px] h-[43.08px] object-contain cursor-pointer" />
       </div>
     </div>
   </section>
